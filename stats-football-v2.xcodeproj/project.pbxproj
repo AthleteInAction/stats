@@ -22,8 +22,10 @@
 		ADAE2B9919F073F100C4D346 /* CtrlGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE2B9819F073F100C4D346 /* CtrlGame.swift */; };
 		ADAE2B9D19F0D65300C4D346 /* CellGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE2B9C19F0D65300C4D346 /* CellGames.swift */; };
 		ADAE2BA519F1C3A100C4D346 /* CtrlGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE2BA419F1C3A100C4D346 /* CtrlGameView.swift */; };
-		ADAE2BA919F3458000C4D346 /* DrawOnField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE2BA819F3458000C4D346 /* DrawOnField.swift */; };
+		ADAE2BA919F3458000C4D346 /* FootballField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE2BA819F3458000C4D346 /* FootballField.swift */; };
 		ADAE2BAB19F3464400C4D346 /* line.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE2BAA19F3464400C4D346 /* line.swift */; };
+		ADAE2BB319F48E0400C4D346 /* dragXView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE2BB219F48E0400C4D346 /* dragXView.swift */; };
+		ADAE2BB519F4A7C200C4D346 /* ButtonDragX.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE2BB419F4A7C200C4D346 /* ButtonDragX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +58,10 @@
 		ADAE2B9819F073F100C4D346 /* CtrlGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CtrlGame.swift; sourceTree = "<group>"; };
 		ADAE2B9C19F0D65300C4D346 /* CellGames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellGames.swift; sourceTree = "<group>"; };
 		ADAE2BA419F1C3A100C4D346 /* CtrlGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CtrlGameView.swift; sourceTree = "<group>"; };
-		ADAE2BA819F3458000C4D346 /* DrawOnField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawOnField.swift; sourceTree = "<group>"; };
+		ADAE2BA819F3458000C4D346 /* FootballField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootballField.swift; sourceTree = "<group>"; };
 		ADAE2BAA19F3464400C4D346 /* line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = line.swift; sourceTree = "<group>"; };
+		ADAE2BB219F48E0400C4D346 /* dragXView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dragXView.swift; sourceTree = "<group>"; };
+		ADAE2BB419F4A7C200C4D346 /* ButtonDragX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonDragX.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +118,10 @@
 				ADAE2B9819F073F100C4D346 /* CtrlGame.swift */,
 				ADAE2B9C19F0D65300C4D346 /* CellGames.swift */,
 				ADAE2BA419F1C3A100C4D346 /* CtrlGameView.swift */,
-				ADAE2BA819F3458000C4D346 /* DrawOnField.swift */,
+				ADAE2BA819F3458000C4D346 /* FootballField.swift */,
 				ADAE2BAA19F3464400C4D346 /* line.swift */,
+				ADAE2BB219F48E0400C4D346 /* dragXView.swift */,
+				ADAE2BB419F4A7C200C4D346 /* ButtonDragX.swift */,
 			);
 			path = "stats-football-v2";
 			sourceTree = "<group>";
@@ -251,12 +257,14 @@
 				ADAE2B9519F0716C00C4D346 /* CtrlGames.swift in Sources */,
 				ADAE2B9919F073F100C4D346 /* CtrlGame.swift in Sources */,
 				ADAE2BAB19F3464400C4D346 /* line.swift in Sources */,
+				ADAE2BB519F4A7C200C4D346 /* ButtonDragX.swift in Sources */,
 				ADAE2B8E19F04BD900C4D346 /* CtrlTeams.swift in Sources */,
 				ADAE2B9219F04CCB00C4D346 /* TeamsModel.swift in Sources */,
+				ADAE2BB319F48E0400C4D346 /* dragXView.swift in Sources */,
 				ADAE2B9019F04C6900C4D346 /* CtrlTeam.swift in Sources */,
 				ADAE2BA519F1C3A100C4D346 /* CtrlGameView.swift in Sources */,
 				ADAE2B6E19F048FD00C4D346 /* stats_football_v2.xcdatamodeld in Sources */,
-				ADAE2BA919F3458000C4D346 /* DrawOnField.swift in Sources */,
+				ADAE2BA919F3458000C4D346 /* FootballField.swift in Sources */,
 				ADAE2B6B19F048FD00C4D346 /* AppDelegate.swift in Sources */,
 				ADAE2B9D19F0D65300C4D346 /* CellGames.swift in Sources */,
 			);

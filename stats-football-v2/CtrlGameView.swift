@@ -8,21 +8,31 @@
 
 import UIKit
 
-class CtrlGameView: UIViewController {
+class CtrlGameView: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     
-    @IBOutlet weak var field: DrawOnField!
+    @IBOutlet weak var downPK: UIPickerView!
+    @IBOutlet weak var field: FootballField!
+    
+    
+    let panRec = UIPanGestureRecognizer()
+    
+    var firstDownLoc: CGPoint!
+    
+    var downs = [
+        ["1","2","3","4","kick","pat"],
+        ["1st","2nd","3rd","4th","KICKOFF","PAT"]
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        var fieldSingleTap = UITapGestureRecognizer(target: self, action: "field_1_Tap")
-//        self.field.addGestureRecognizer(fieldSingleTap)
-//        
-//        var fieldDoubleTap = UITapGestureRecognizer(target: self, action: "field_2_Tap")
-//        fieldDoubleTap.numberOfTapsRequired = 2
-//        self.field.addGestureRecognizer(fieldDoubleTap)
-//        
-//        fieldSingleTap.requireGestureRecognizerToFail(fieldDoubleTap)
+        
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        
         
     }
 
@@ -30,21 +40,39 @@ class CtrlGameView: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func field_1_Tap(){
+    // Down Picker
+    // ========================================================================
+    // ========================================================================
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return downs[0].count
+    }
+    
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         
-        JP("ONE TAP")
+        let str = NSAttributedString(string: downs[1][row], attributes: [NSForegroundColorAttributeName : UIColor(red: 231, green: 231, blue: 231, alpha: 1)])
         
-//        var FieldDraw: DrawOnField = field as DrawOnField
-//        
-//        FieldDraw.tap_num++
+        return str
         
     }
     
-    func field_2_Tap(){
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        JP("TWO TAP")
+        
         
     }
+    // ========================================================================
+    // ========================================================================
     
+    
+    // Touches
+    // ========================================================================
+    // ========================================================================
+    
+    // ========================================================================
+    // ========================================================================
 
 }

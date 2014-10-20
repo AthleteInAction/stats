@@ -207,7 +207,7 @@
             </objects>
             <point key="canvasLocation" x="1735" y="836"/>
         </scene>
-        <!--GAME-->
+        <!--GAME VIEW-->
         <scene sceneID="4MH-8W-5sY">
             <objects>
                 <viewController id="umI-Ub-lBM" customClass="CtrlGameView" customModule="stats_football_v2" customModuleProvider="target" sceneMemberID="viewController">
@@ -216,21 +216,39 @@
                         <viewControllerLayoutGuide type="bottom" id="nRP-W7-Lb5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="m3W-9X-fBJ">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="field" translatesAutoresizingMaskIntoConstraints="NO" id="L2O-Ow-pgX">
-                                <rect key="frame" x="62" y="89" width="900" height="654"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="field_900" translatesAutoresizingMaskIntoConstraints="NO" id="L2O-Ow-pgX">
+                                <rect key="frame" x="34" y="387" width="700" height="408"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V0w-Bn-Wra" customClass="DrawOnField" customModule="stats_football_v2" customModuleProvider="target">
-                                <rect key="frame" x="62" y="89" width="900" height="654"/>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q2p-dR-41R">
+                                <rect key="frame" x="245" y="64" width="278" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="umI-Ub-lBM" id="jgJ-QS-ak2"/>
+                                    <outlet property="delegate" destination="umI-Ub-lBM" id="ZdD-Ia-1xm"/>
+                                </connections>
+                            </pickerView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kLb-sL-keB" customClass="FootballField" customModule="stats_football_v2" customModuleProvider="target">
+                                <rect key="frame" x="34" y="353" width="700" height="442"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ja-b6-3NN">
+                                        <rect key="frame" x="171" y="0.0" width="16" height="30"/>
+                                        <color key="backgroundColor" red="0.91094174589999999" green="0.7445454802" blue="0.002154597617" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="GAME" id="gnr-2U-O6A"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationItem key="navigationItem" title="GAME VIEW" id="gnr-2U-O6A"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="downPK" destination="q2p-dR-41R" id="Ojf-LZ-Knl"/>
+                        <outlet property="field" destination="kLb-sL-keB" id="bM6-2d-W9C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEz-2A-TdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="42n-7a-E57"/>
@@ -317,7 +335,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="field" width="900" height="654"/>
+        <image name="field_900" width="900" height="654"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XmA-Dn-nVC"/>
